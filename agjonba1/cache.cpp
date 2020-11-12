@@ -3,24 +3,23 @@
 using namespace std;
 
 vector<unsigned long long> memAddr;
-vector<bool> types;
+vector<char> types;
+
+
 
 //Input and Output
 void readFile(char* argv[]){
-    // Temporary variables
     unsigned long long addr;
-    string type;
+    char type;
 
     // Open file for reading
     ifstream infile(argv[1]);
     // The following loop will read a hexadecimal number and
-    // a string each time and then output them
-    while(infile >> type >> addr) {
-        if(type = "L")
-            types.push_back(1);
-        else
-            types.push_back(0);
-        
+    // a type each time and then output them
+    while(infile >> type >> hex >> addr) {
+        types.push_back(type);
+        //printf("Addr: %lu", addr);
+        types.push_back(type);
         memAddr.push_back(addr);
     }
     infile.close();

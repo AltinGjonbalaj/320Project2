@@ -5,7 +5,7 @@ CC = g++
 
 all: cache
 	
-predictors:	$(OBJS)
+cache:	$(OBJS)
 	$(CC) $(CFLAGS) -o $(@) $(OBJS)
 
 .cpp.o:

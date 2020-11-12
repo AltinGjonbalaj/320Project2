@@ -1,7 +1,7 @@
 #ifndef cache_h
 #define cache_h
 #include <iostream>
-#include <strings>
+#include <string>
 #include <fstream>
 #include <sstream>
 #include <array>
