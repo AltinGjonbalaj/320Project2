@@ -8,13 +8,17 @@
 #include <vector>
 
 
-void readFile(char* argv[]);
-void writeFile(char* argv[]);
-//Methods
-void directMapped();
-void setAsso();
-void fullyAsso();
+extern std::vector<unsigned long long> memAddr;
+extern std::vector<char> types;
 
+//Methods
+int directMapped(int cacheSize);
+int setAsso(int associativity);
+int fullyAsso();
+
+int noAlloc(int associativity);
+int nPref(int associativity);
+int missPref(int associativity);
 
 
 
